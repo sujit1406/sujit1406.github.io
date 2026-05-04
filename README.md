@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# Sujith Antony - iOS Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive portfolio website showcasing my work as an iOS Developer with expertise in SwiftUI, Swift, and related technologies.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Interactive Hero Section** - Dynamic hero with 3D Spline integration
+- **About Me** - Professional summary with glass morphism design
+- **Work Experience Timeline** - Visual grapevine-themed timeline with company details
+- **Featured Projects** - Showcase of key projects with hover effects
+- **Skills Section** - Technical skills and competencies
+- **Contact Form** - Functional contact form with email validation
+- **Smooth Animations** - Powered by Framer Motion
+- **Glass Morphism UI** - Modern translucent design elements
+- **Responsive Design** - Optimized for all device sizes
+- **Loading Screen** - Animated loader with progress bar
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework:** React 19 with TypeScript
+- **Build Tool:** Vite 8
+- **Styling:** CSS3 with Glass Morphism effects
+- **Animations:** Framer Motion 12
+- **3D Graphics:** Three.js, React Three Fiber, React Three Drei
+- **3D Scenes:** Spline Runtime & Viewer
+- **Deployment:** GitHub Pages (sujithantony.github.io)
 
-## Expanding the ESLint configuration
+## 📋 Sections
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Hero** - Introduction with 3D background and call-to-action
+2. **About** - Professional background and summary
+3. **Experience** - Work history with grapevine timeline visualization
+4. **Projects** - Featured iOS development projects
+5. **Skills** - Technical skills and tools
+6. **Contact** - Contact form with email validation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+
+## 📄 License
+
+This project is open-sourced for portfolio demonstration purposes.
+
+---
+
+Made with ❤️ by Sujith Antony
