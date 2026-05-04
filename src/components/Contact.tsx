@@ -84,7 +84,7 @@ const Contact = () => {
               <div className="social-links">
                 {[
                   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/sujithantony' },
-                  { name: 'GitHub', url: '#' },
+                  { name: 'GitHub', url: 'https://github.com/sujit1406' },
                   { name: 'Email', url: 'mailto:mail2say@gmail.com' },
                 ].map((social) => (
                   <motion.a

@@ -120,7 +120,6 @@ const Experience = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <div className="timeline-dot" />
               <div className="timeline-content">
                 <div className="timeline-header">
                   <h3>{exp.role}</h3>
