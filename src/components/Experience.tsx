@@ -74,6 +74,75 @@ const experiences = [
   },
 ]
 
+const ExperienceCard = ({ exp, index }: { exp: typeof experiences[0], index: number }) => {
+  return (
+    <motion.div
+      className="timeline-item"
+      // 1st: Staggered Spring Reveal Entrance
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ 
+        type: "spring", 
+        stiffness: 100, 
+        damping: 15,
+        delay: index * 0.1 
+      }}
+      // 3rd: Lift & Glow on Hover
+      whileHover={{ 
+        y: -10, 
+        scale: 1.02,
+        boxShadow: "0 20px 40px rgba(0, 122, 255, 0.2)" 
+      }}
+      // 5th: iOS Haptic Squish (no rotation)
+      whileTap={{ scale: 0.95 }}
+    >
+      <div className="timeline-content glass-card">
+        {/* 3rd: Shimmer Effect overlay */}
+        <motion.div 
+          className="shimmer-wrapper"
+          animate={{ left: ["-150%", "150%"] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+        />
+        
+        <div className="timeline-header">
+          {/* 1st: Internal Staggering for Header */}
+          <motion.h3
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: (index * 0.1) + 0.3 }}
+          >
+            {exp.role}
+          </motion.h3>
+          <span className="timeline-company">{exp.company}</span>
+        </div>
+        
+        <div className="timeline-meta">
+          <span className="timeline-period">{exp.period}</span>
+          <span className="timeline-duration">{exp.duration}</span>
+          <span className="timeline-location">{exp.location}</span>
+        </div>
+        
+        <ul className="timeline-highlights">
+          {exp.highlights.map((highlight, hIndex) => (
+            <motion.li 
+              key={highlight}
+              // 1st: Internal Staggering for Highlights
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: (index * 0.1) + 0.4 + (hIndex * 0.1) }}
+            >
+              {highlight}
+            </motion.li>
+          ))}
+        </ul>
+      </div>
+    </motion.div>
+  )
+}
+
 const Experience = () => {
   return (
     <section id="experience" className="experience-section">
@@ -109,36 +178,12 @@ const Experience = () => {
           </motion.h2>
         </motion.div>
 
-        <div className="experience-glass-container">
+        <div className="experience-glass-container glass-card">
           <div className="timeline">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={`${exp.company}-${exp.period}`}
-              className="timeline-item"
-              initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-            >
-              <div className="timeline-content">
-                <div className="timeline-header">
-                  <h3>{exp.role}</h3>
-                  <span className="timeline-company">{exp.company}</span>
-                </div>
-                <div className="timeline-meta">
-                  <span className="timeline-period">{exp.period}</span>
-                  <span className="timeline-duration">{exp.duration}</span>
-                  <span className="timeline-location">{exp.location}</span>
-                </div>
-                <ul className="timeline-highlights">
-                  {exp.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+            {experiences.map((exp, index) => (
+              <ExperienceCard key={`${exp.company}-${exp.period}`} exp={exp} index={index} />
+            ))}
+          </div>
         </div>
       </motion.div>
     </section>

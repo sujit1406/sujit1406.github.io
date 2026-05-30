@@ -13,16 +13,6 @@
   transition: width 0.1s ease;
 }
 
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
-  z-index: 9999;
-  transition: width 0.1s ease;
-}
-
 .loader {
   position: fixed;
   top: 0;
@@ -71,18 +61,6 @@
   opacity: 0.7;
 }
 
-@media (max-width: 768px) {
-  .canvas-container {
-    opacity: 0.3;
-  }
-}
-
-@media (max-width: 768px) {
-  .canvas-container {
-    opacity: 0.2;
-  }
-}
-
 .content {
   position: relative;
   z-index: 1;
@@ -91,11 +69,6 @@
 
 .content > * {
   pointer-events: auto;
-}
-
-section {
-  opacity: 0;
-  animation: section-fade-in 0.8s ease forwards;
 }
 
 @keyframes section-fade-in {
@@ -121,6 +94,10 @@ section {
   section {
     padding: 80px 5% 40px;
     min-height: auto;
+  }
+
+  .canvas-container {
+    opacity: 0.2;
   }
   
   .canvas-container canvas {

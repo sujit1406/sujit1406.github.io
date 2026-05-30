@@ -80,7 +80,7 @@ const Contact = () => {
           </motion.h2>
         </motion.div>
 
-        <div className="contact-glass-container">
+        <div className="contact-glass-container glass-card">
           <div className="contact-grid">
             <motion.div
               className="contact-info"
@@ -129,7 +129,7 @@ const Contact = () => {
             </motion.div>
 
             <motion.form
-              className="contact-form"
+              className="contact-form glass-card"
               onSubmit={handleSubmit}
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}

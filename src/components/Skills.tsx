@@ -55,12 +55,12 @@ const Skills = () => {
           </h2>
         </motion.div>
 
-        <div className="skills-glass-container">
+        <div className="skills-glass-container glass-card">
           <div className="skills-grid">
             {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              className="skill-card"
+              className="skill-card glass-card"
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}

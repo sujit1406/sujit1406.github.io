@@ -56,10 +56,6 @@
   padding: 0.5rem 0;
 }
 
-.nav-link:hover {
-  color: #1a1a2e;
-}
-
 .nav-link::after {
   content: '';
   position: absolute;

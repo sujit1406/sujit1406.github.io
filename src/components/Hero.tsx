@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section id="hero" className="hero-section">
       <motion.div
-        className="hero-glass-container"
+        className="hero-glass-container glass-card"
         variants={containerVariants}
         initial="hidden"
         animate="visible"

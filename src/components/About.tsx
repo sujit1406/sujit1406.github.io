@@ -37,7 +37,7 @@ const About = () => {
 
         <div className="about-grid">
           <motion.div className="about-text" variants={itemVariants}>
-            <div className="about-glass-container">
+            <div className="about-glass-container glass-card">
               <p>
                 Seasoned iOS Engineer with 15+ years of experience designing and
                 delivering enterprise-grade mobile apps across healthcare IoT (BLE
@@ -64,7 +64,8 @@ const About = () => {
           </motion.div>
 
           <motion.div className="about-card" variants={itemVariants}>
-            <div className="card-glass">
+            <div className="card-glass glass-card">
+
               <div className="card-icon">📱</div>
               <h3>Technical Consultant</h3>
               <p>Based in Bengaluru, Karnataka, India</p>

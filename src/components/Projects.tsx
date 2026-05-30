@@ -53,12 +53,12 @@ const Projects = () => {
           </h2>
         </motion.div>
 
-        <div className="projects-glass-container">
+        <div className="projects-glass-container glass-card">
           <div className="projects-grid">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
-                className="project-card"
+                className="project-card glass-card"
                 initial={{ y: 100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
