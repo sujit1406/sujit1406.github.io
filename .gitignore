@@ -6,7 +6,7 @@
 ._*
 
 # Custom folder icons
-Icon
+Icon
 
 # Volume root files
 .DocumentRevisions-V100
@@ -54,6 +54,8 @@ build/Release
 *.tsbuildinfo
 
 # Framework build output and caches
+dist/
+assets/
 .cache
 .parcel-cache
 .next

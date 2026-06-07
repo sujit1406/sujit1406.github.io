@@ -22,6 +22,7 @@ function App() {
       <AnimatePresence>
         {isLoading && (
           <motion.div
+            key="loader"
             className="loader"
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
