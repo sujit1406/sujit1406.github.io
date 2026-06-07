@@ -77,11 +77,14 @@ const Skills = () => {
         className="section-container"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "0px" }} // Removed negative margin
+        viewport={{ once: true, margin: "0px" }}
         variants={containerVariants}
       >
         <motion.div
           className="section-header"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           variants={cardVariants}
         >
           <span className="section-tag">Expertise</span>
@@ -92,6 +95,9 @@ const Skills = () => {
 
         <motion.div 
           className="skills-glass-container glass-card"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           variants={cardVariants}
         >
           <div className="skills-grid">
@@ -99,6 +105,9 @@ const Skills = () => {
               <motion.div
                 key={category.title}
                 className="skill-card glass-card"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
                 variants={cardVariants}
                 whileHover={{ 
                   scale: 1.05, 
@@ -129,6 +138,9 @@ const Skills = () => {
                     <motion.span
                       key={skill}
                       className="skill-tag"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
                       variants={tagVariants}
                       whileHover={{ 
                         scale: 1.1, 
