@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemaps (Optional but recommended)
+Sitemap: https://sujit1406.github.io/sujithantony.github.io/sitemap.xml
