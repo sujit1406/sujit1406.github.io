@@ -50,7 +50,7 @@ const cardVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      type: 'spring',
+      type: 'spring' as const,
       stiffness: 100,
       damping: 15,
     },
@@ -63,7 +63,7 @@ const tagVariants = {
     scale: 1,
     opacity: 1,
     transition: {
-      type: 'spring',
+      type: 'spring' as const,
       stiffness: 200,
       damping: 10,
     },
@@ -106,7 +106,7 @@ const Skills = () => {
                   boxShadow: "0 15px 30px rgba(34, 197, 94, 0.2)",
                   borderColor: "rgba(34, 197, 94, 0.5)"
                 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+                transition={{ type: 'spring' as const, stiffness: 300, damping: 15 }}
               >
                 <motion.div 
                   className="skill-icon"
