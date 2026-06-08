@@ -91,8 +91,7 @@ const ExperienceCard = ({ exp, index }: { exp: typeof experiences[0], index: num
       // 3rd: Lift & Glow on Hover
       whileHover={{ 
         y: -10, 
-        scale: 1.02,
-        boxShadow: "0 20px 40px rgba(0, 122, 255, 0.2)" 
+        scale: 1.02
       }}
       // 5th: iOS Haptic Squish (no rotation)
       whileTap={{ scale: 0.95 }}
