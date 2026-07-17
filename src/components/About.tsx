@@ -46,7 +46,16 @@ const About = () => {
               <p>
                 Skilled in Swift, SwiftUI, Combine, RxSwift, and modern architectures
                 (MVVM, VIPER, Clean). Proven success in building and scaling apps
-                for WS Audiology, Jio, Mavenir, and Harman.
+                for WS Audiology, Jio, Mavenir, and Harman. Implemented robust CI/CD
+                pipelines to streamline testing, code quality, and release workflows
+                across multiple app projects.
+              </p>
+              <p>
+                Extended expertise into AI with hands-on experience building intelligent
+                agents using OpenCode, Ollama, LangChain, and LangGraph — applying RAG,
+                fine-tuning, and multi-model strategies (Gemini, Qwen, DeepSeek) to
+                solve real-world problems. Passionate about exploring new frontiers
+                in AI and cloud technologies.
               </p>
               <div className="about-highlights">
                 {[
@@ -54,6 +63,7 @@ const About = () => {
                   '📱 SwiftUI & Combine Specialist',
                   '⚙️ CI/CD Pipeline Automation',
                   '🎯 Agile/Scrum Leadership',
+                  ' Forever Apple Fan',
                 ].map((item) => (
                   <div key={item} className="highlight-item">
                     {item}

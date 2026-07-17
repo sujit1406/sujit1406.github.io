@@ -5,12 +5,12 @@ const skillCategories = [
   {
     title: 'Languages',
     icon: '💻',
-    skills: ['Swift', 'Objective-C', 'Python', 'Dart'],
+    skills: ['Swift', 'Objective-C', 'Python', 'Node.js'],
   },
   {
     title: 'Frameworks',
     icon: '⚙️',
-    skills: ['SwiftUI', 'UIKit', 'Combine', 'RxSwift', 'Flutter'],
+    skills: ['SwiftUI', 'UIKit', 'Combine', 'RxSwift', 'Express'],
   },
   {
     title: 'Architecture',
@@ -30,7 +30,12 @@ const skillCategories = [
   {
     title: 'Certifications',
     icon: '📜',
-    skills: ['Async/Await & Actors', 'Python Data Science', 'Flutter Bootcamp'],
+    skills: ['Async/Await & Actors', 'Python Data Science'],
+  },
+  {
+    title: 'AI & LLMs',
+    icon: '🤖',
+    skills: ['LangChain', 'LangGraph', 'Ollama', 'Gemini', 'Qwen', 'DeepSeek', 'RAG', 'Fine-Tuning', 'OpenCode Agents', 'VibeCoding'],
   },
 ]
 

@@ -30,17 +30,12 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.div className="hero-badge" variants={itemVariants}>
-          <span className="badge-dot"></span>
-          Open to Opportunities
-        </motion.div>
-
         <motion.h1 className="hero-title" variants={itemVariants}>
           Sujith <span className="gradient-text">Antony</span>
         </motion.h1>
 
         <motion.p className="hero-subtitle" variants={itemVariants}>
-          Technical Consultant | Swift, SwiftUI, BLE/IoT | CI/CD
+          Technical Consultant | Swift, SwiftUI, BLE/IoT | CI/CD | AI
         </motion.p>
 
         <motion.div className="hero-buttons" variants={itemVariants}>
