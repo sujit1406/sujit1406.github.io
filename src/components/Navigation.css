@@ -20,25 +20,8 @@
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: #1a1a2e;
-  font-weight: 700;
-  font-size: 1.1rem;
-  z-index: 1001;
-}
-
-.logo-icon {
-  font-family: 'Space Grotesk', monospace;
-  color: var(--primary);
-  font-size: 1.3rem;
 }
 
 .nav-links {
@@ -110,6 +93,7 @@
 @media (max-width: 768px) {
   .nav-container {
     padding: 0 1rem;
+    justify-content: flex-end;
   }
   
   .mobile-menu-btn {

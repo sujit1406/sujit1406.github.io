@@ -29,11 +29,6 @@ const Navigation = () => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       <div className="nav-container">
-        <a href="#hero" className="nav-logo">
-          <span className="logo-icon">{"</>"}</span>
-          <span className="logo-text">Sujith</span>
-        </a>
-
         <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
           {navItems.map((item, index) => (
             <motion.a
