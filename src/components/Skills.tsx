@@ -1,7 +1,16 @@
 import { motion } from 'framer-motion'
 import './Skills.css'
 
-const skillCategories = [
+// A skill is either a plain label or a label linked to a certificate.
+type Skill = string | { label: string; href: string }
+
+type SkillCategory = {
+  title: string
+  icon: string
+  skills: Skill[]
+}
+
+const skillCategories: SkillCategory[] = [
   {
     title: 'Languages',
     icon: '💻',
@@ -30,7 +39,19 @@ const skillCategories = [
   {
     title: 'Certifications',
     icon: '📜',
-    skills: ['Async/Await & Actors', 'Python Data Science'],
+    skills: [
+      {
+        label: 'Complete AI Engineer Bootcamp',
+        href: 'https://www.udemy.com/certificate/UC-072a723b-d088-4d08-a917-b7a32c0175fd/',
+      },
+      'SwiftUI Essentials',
+      'iOS App Development: Design Patterns for Mobile Architecture',
+      {
+        label: 'Async/Await & Actors',
+        href: 'https://www.udemy.com/certificate/UC-785e101d-6268-4725-9020-7cf242028f68/',
+      },
+      'Python Data Science',
+    ],
   },
   {
     title: 'AI & LLMs',
@@ -139,25 +160,53 @@ const Skills = () => {
                 </motion.div>
                 <h3>{category.title}</h3>
                 <div className="skill-tags">
-                  {category.skills.map((skill, sIndex) => (
-                    <motion.span
-                      key={skill}
-                      className="skill-tag"
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true }}
-                      variants={tagVariants}
-                      whileHover={{ 
-                        scale: 1.1, 
-                        backgroundColor: "rgba(34, 197, 94, 0.2)",
-                        color: "#166534"
-                      }}
-                      whileTap={{ scale: 0.95 }}
-                      transition={{ delay: sIndex * 0.05 }}
-                    >
-                      {skill}
-                    </motion.span>
-                  ))}
+                  {category.skills.map((skill, sIndex) => {
+                    const label = typeof skill === 'string' ? skill : skill.label
+                    const href = typeof skill === 'string' ? undefined : skill.href
+                    const tagProps = {
+                      className: href ? 'skill-tag skill-tag-link' : 'skill-tag',
+                      initial: 'hidden',
+                      whileInView: 'visible',
+                      viewport: { once: true },
+                      variants: tagVariants,
+                      whileHover: {
+                        scale: 1.1,
+                        backgroundColor: 'rgba(34, 197, 94, 0.2)',
+                        color: '#166534',
+                      },
+                      whileTap: { scale: 0.95 },
+                      transition: { delay: sIndex * 0.05 },
+                    } as const
+
+                    const content = (
+                      <>
+                        {label}
+                        {href && (
+                          <span className="skill-tag-arrow" aria-hidden="true">
+                            ↗
+                          </span>
+                        )}
+                      </>
+                    )
+
+                    return href ? (
+                      <motion.a
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={`View the ${label} certificate`}
+                        aria-label={`${label} certificate (opens in a new tab)`}
+                        {...tagProps}
+                      >
+                        {content}
+                      </motion.a>
+                    ) : (
+                      <motion.span key={label} {...tagProps}>
+                        {content}
+                      </motion.span>
+                    )
+                  })}
                 </div>
               </motion.div>
             ))}
