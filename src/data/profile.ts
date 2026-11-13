@@ -131,16 +131,11 @@ export const formatDuration = ({ start, end }: Experience) => {
   return parts.join(' ')
 }
 
-export const careerStart: YearMonth = experiences.reduce(
-  (earliest, exp) =>
-    exp.start.year < earliest.year ||
-    (exp.start.year === earliest.year && exp.start.month < earliest.month)
-      ? exp.start
-      : earliest,
-  experiences[0].start,
-)
+// The career began before the roles shown here: earlier positions are
+// intentionally left off the timeline, so this is set explicitly.
+export const careerStart: YearMonth = { year: 2010, month: 11 }
 
-// Derived from the earliest role so the headline cannot drift from the timeline.
+// Derived from careerStart, so the headline advances automatically.
 export const getYearsOfExperience = (now: YearMonth = currentYearMonth()) => {
   const totalMonths = Math.max(
     1,
