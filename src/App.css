@@ -44,7 +44,7 @@
 
 .loader-bar {
   height: 3px;
-  background: linear-gradient(90deg, #007AFF, #5856D6, #FF2D55);
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--accent));
   border-radius: 3px;
   max-width: 200px;
   margin: 0 auto;

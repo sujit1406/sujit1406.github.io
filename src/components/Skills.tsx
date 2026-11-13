@@ -99,7 +99,7 @@ const Skills = () => {
         </motion.div>
 
         <motion.div 
-          className="skills-glass-container glass-card"
+          className="skills-glass-container glass-panel"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

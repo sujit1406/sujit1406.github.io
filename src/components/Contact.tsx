@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { profile } from '../data/profile'
 import './Contact.css'
 
 const Contact = () => {
@@ -30,7 +31,7 @@ const Contact = () => {
     if (isValid) {
       const subject = `Portfolio Contact: ${formData.name}`
       const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage: ${formData.message}`
-      const mailtoLink = `mailto:mail2say@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+      const mailtoLink = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
       window.location.href = mailtoLink
       setFormData({ name: '', email: '', message: '' })
       setErrors({ email: '' })
@@ -80,7 +81,7 @@ const Contact = () => {
           </motion.h2>
         </motion.div>
 
-        <div className="contact-glass-container glass-card">
+        <div className="contact-glass-container glass-panel">
           <div className="contact-grid">
             <motion.div
               className="contact-info"
@@ -94,9 +95,9 @@ const Contact = () => {
               </p>
               <div className="contact-items">
                 {[
-                  { icon: '📧', label: 'Email', value: 'mail2say@gmail.com' },
-                  { icon: '📱', label: 'Phone', value: 'Available on request' },
-                  { icon: '📍', label: 'Location', value: 'Bengaluru, Karnataka, India' },
+                  { icon: '📧', label: 'Email', value: profile.email },
+                  { icon: '📱', label: 'Phone', value: profile.phone },
+                  { icon: '📍', label: 'Location', value: profile.location },
                 ].map((item) => (
                   <div key={item.label} className="contact-item">
                     <span className="contact-icon">{item.icon}</span>
@@ -109,9 +110,9 @@ const Contact = () => {
               </div>
               <div className="social-links">
                 {[
-                  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/sujithantony' },
-                  { name: 'GitHub', url: 'https://github.com/sujit1406' },
-                  { name: 'Email', url: 'mailto:mail2say@gmail.com' },
+                  { name: 'LinkedIn', url: profile.links.linkedin },
+                  { name: 'GitHub', url: profile.links.github },
+                  { name: 'Email', url: profile.links.email },
                 ].map((social) => (
                   <motion.a
                     key={social.name}

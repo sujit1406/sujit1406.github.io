@@ -1,5 +1,5 @@
 .experience-section {
-  background: linear-gradient(180deg, transparent, rgba(255, 45, 85, 0.05));
+  background: linear-gradient(180deg, transparent, rgba(101, 163, 13, 0.05));
   padding-top: 80px;
 }
 
@@ -64,7 +64,7 @@
 
 .timeline-content:hover {
   border-color: var(--primary);
-  box-shadow: 0 20px 40px rgba(0, 122, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(22, 163, 74, 0.2);
 }
 
 .timeline-header {
@@ -94,7 +94,7 @@
 
 .timeline-period {
   padding: 0.3rem 0.8rem;
-  background: rgba(0, 122, 255, 0.1);
+  background: rgba(22, 163, 74, 0.12);
   border-radius: 50px;
   color: var(--primary);
 }

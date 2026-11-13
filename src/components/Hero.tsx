@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
+import { getYearsOfExperience } from '../data/profile'
 import './Hero.css'
 
 const Hero = () => {
+  const yearsOfExperience = getYearsOfExperience()
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -60,7 +63,7 @@ const Hero = () => {
 
         <motion.div className="hero-stats" variants={itemVariants}>
           {[
-            { number: '15+', label: 'Years Experience' },
+            { number: `${yearsOfExperience}+`, label: 'Years Experience' },
             { number: '20+', label: 'Apps Shipped' },
             { number: '100K+', label: 'Users Served' },
           ].map((stat) => (

@@ -5,10 +5,11 @@
 }
 
 :root {
-  --primary: #007AFF;
-  --primary-dark: #0056CC;
-  --secondary: #5856D6;
-  --accent: #FF2D55;
+  /* Single green/teal system used across every section. */
+  --primary: #15803d;
+  --primary-dark: #14532d;
+  --secondary: #0f766e;
+  --accent: #4d7c0f;
   --bg-dark: #f0fdf4;
   --bg-light: #dcfce7;
   --text-primary: #1a1a2e;
@@ -40,13 +41,27 @@ body {
   width: 100%;
   height: 100%;
   z-index: -2;
-  background: url('./assets/backgrounds/plants-2.jpg') center center / cover no-repeat;
+  background-image: url('./assets/backgrounds/plants-2-1920.jpg');
+  background-image: image-set(
+    url('./assets/backgrounds/plants-2-1920.avif') type('image/avif'),
+    url('./assets/backgrounds/plants-2-1920.webp') type('image/webp'),
+    url('./assets/backgrounds/plants-2-1920.jpg') type('image/jpeg')
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 @media (max-width: 768px) {
   .page-background {
-    background: url('./assets/backgrounds/plant_mobil1.jpg') center center / cover no-repeat;
+    background-image: url('./assets/backgrounds/plant_mobil1-1080.jpg');
+    background-image: image-set(
+      url('./assets/backgrounds/plant_mobil1-1080.avif') type('image/avif'),
+      url('./assets/backgrounds/plant_mobil1-1080.webp') type('image/webp'),
+      url('./assets/backgrounds/plant_mobil1-1080.jpg') type('image/jpeg')
+    );
+    background-attachment: scroll;
   }
 }
 
@@ -103,7 +118,7 @@ body {
 .cursor-ring {
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(0, 122, 255, 0.3);
+  border: 1px solid rgba(22, 163, 74, 0.3);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;

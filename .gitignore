@@ -55,7 +55,7 @@ build/Release
 
 # Framework build output and caches
 dist/
-assets/
+/assets/
 .cache
 .parcel-cache
 .next

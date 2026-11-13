@@ -7,28 +7,28 @@ const projects = [
     description: 'Led iOS development for Signia, a hearing-aid configuration app using SwiftUI, Combine, and BLE. Mentored 3 junior engineers and improved code coverage by 30%.',
     tech: ['SwiftUI', 'Combine', 'BLE', 'CI/CD'],
     image: '🎧',
-    color: '#5856D6',
+    color: '#16a34a',
   },
   {
     title: 'JioXplor - Indoor Navigation',
     description: 'Built and shipped an indoor navigation app powered by Bluetooth Low Energy (BLE) beacons. Integrated Ionic framework with native iOS, reducing app load time by 25%.',
     tech: ['Swift', 'BLE', 'Ionic', 'OpenLayers'],
     image: '📍',
-    color: '#FF2D55',
+    color: '#0d9488',
   },
   {
     title: 'Mavenir Connect - VoIP & Messaging',
     description: 'Co-developed a secure enterprise VoIP & messaging app used by global customers. Increased app stability and improved enterprise adoption.',
     tech: ['Swift', 'VoIP', 'WebRTC', 'MVVM'],
     image: '📞',
-    color: '#34C759',
+    color: '#22c55e',
   },
   {
     title: 'Aha Radio - Automotive Integration',
     description: 'Contributed to Aha Radio integration for Maruti Suzuki SmartPlay & Audi Connect systems. Spearheaded iOS CI/CD automation, cutting release effort from days to hours.',
     tech: ['Objective-C', 'Swift', 'CI/CD', 'Automotive'],
     image: '🚗',
-    color: '#FF9500',
+    color: '#65a30d',
   },
 ]
 
@@ -53,7 +53,7 @@ const Projects = () => {
           </h2>
         </motion.div>
 
-        <div className="projects-glass-container glass-card">
+        <div className="projects-glass-container glass-panel">
           <div className="projects-grid">
             {projects.map((project, index) => (
               <motion.div

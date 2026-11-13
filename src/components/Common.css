@@ -8,6 +8,13 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
 }
 
+/* Outer section wrapper: same tint, but no second blur layer. */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
 .section-header {
   margin-bottom: 3rem;
   display: inline-block;
@@ -50,7 +57,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #166534, #22c55e, #86efac);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary), #86efac);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

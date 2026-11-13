@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
+import { getYearsOfExperience, profile } from '../data/profile'
 import './About.css'
 
 const About = () => {
+  const yearsOfExperience = getYearsOfExperience()
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -39,7 +42,7 @@ const About = () => {
           <motion.div className="about-text" variants={itemVariants}>
             <div className="about-glass-container glass-card">
               <p>
-                Seasoned iOS Engineer with 15+ years of experience designing and
+                Seasoned iOS Engineer with {yearsOfExperience}+ years of experience designing and
                 delivering enterprise-grade mobile apps across healthcare IoT (BLE
                 hearing aids), telecom (VoIP & messaging), and indoor navigation.
               </p>
@@ -77,8 +80,8 @@ const About = () => {
             <div className="card-glass glass-card">
 
               <div className="card-icon">📱</div>
-              <h3>Technical Consultant</h3>
-              <p>Based in Bengaluru, Karnataka, India</p>
+              <h3>{profile.role}</h3>
+              <p>Based in {profile.location}</p>
             </div>
           </motion.div>
         </div>
