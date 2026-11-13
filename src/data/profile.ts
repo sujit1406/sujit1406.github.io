@@ -80,7 +80,6 @@ export const experiences: Experience[] = [
     location: 'Bengaluru, Karnataka, India',
     highlights: [
       'Aha Radio integration for Maruti Suzuki & Audi Connect',
-      'Spearheaded iOS CI/CD automation - days to hours',
       'Architectural diagrams and technical design',
     ],
   },
